@@ -51,7 +51,3 @@ npm run prod    // production build
 npm run critical
 npm run postprod
 ```
-
-## License
-
-MIT License.
