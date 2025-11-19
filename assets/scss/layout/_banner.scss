@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+.banner {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	.carousel, 
+	.carousel-inner,
+	.custom {
+		height: 100%;
+	}
+	.custom {
+		.bg {
+			height: 100%;
+		}
+		&.active {
+			.bg {
+				animation: zoom 6s forwards;
+			}
+		}
+		.slider-caption {
+			position: absolute;
+			right: 0;
+			bottom: 20%;
+			left: 0;;
+			@include m.breakpoint(small) {
+				left: 15px;
+				right: 15px;
+			}
+		}
+	}
+}

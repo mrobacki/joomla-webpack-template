@@ -1,0 +1,77 @@
+$screen-big: 		                1390px;
+$screen-big-size: 	            1370px;
+$screen-large: 		              1389px;
+$screen-medium: 	              1199px;
+$screen-semi: 		              991px;
+$screen-small: 		              767px;
+
+$big-container: 	              1370px;
+
+
+// ********** Typography
+	
+// Fonts
+$default-font:                  "Open Sans", sans-serif;
+$default-header-font:           "Open Sans", sans-serif;
+$debug-font:                    'Source Code Pro', monospace;
+
+// Font sizes and others
+$font-size-xs:                  10px;
+$font-size-s:                   12px;
+$font-size-m:                   14px;
+$default-font-size:             16px;
+$default-font-l:                22px;
+$default-font-xl:               28px;
+$default-font-xxl:              34px;
+$default-font-xxxl:             42px;
+
+$default-line-height:           180%;
+
+
+
+// ********** Colours
+$white:                         white;
+
+// Text colours
+$default-link-color:              var(--bs-blue); // bootstrap root variables
+// $default-link-color:        blue;
+$default-link-hover-color:      black;
+
+$menu-link-color:               pink;
+$menu-active-link-color:        green;
+
+$default-text-color:            #333;
+
+// Template Colours
+$page-background-color:         white;
+
+
+// ********** Sizes
+// Spaces
+$spaceLR:			                    15px;
+$spaceTB:			                    100px;
+
+// Header variables
+$logo-height: 70px;
+$logo-smaller-height: 40px;
+
+
+// ********** Components
+// Btn
+$def-btn-width:		                200px;
+$def-btn-height:		              65px;
+$def-btn-color:		            	#fff;
+$def-btn-border:	           		#222;
+$def-btn-bg:			              #222;
+$def-btn-bg-hover:	          	#000;
+
+// ********** Others
+
+// Others fonts variables
+$text-transition:                .2s linear all;
+$default-transition:             .2s linear all;
+
+// Debug container
+$pre-debug-background:          #f1f1f1;
+$pre-debug-border-color:        #cecece;
+$pre-debug-color:               #666;

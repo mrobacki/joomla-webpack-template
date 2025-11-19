@@ -1,0 +1,31 @@
+@use "sass:meta";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap');
+
+@import "~bootstrap/scss/bootstrap";
+
+@include meta.load-css("./abstracts/variables");
+@include meta.load-css("./abstracts/mixins");
+	
+@include meta.load-css("./core/reset");
+@include meta.load-css("./core/classes");
+@include meta.load-css("./core/typography");
+
+@include meta.load-css("components/swiper");
+@include meta.load-css("components/cookie");
+@include meta.load-css("components/buttons");
+@include meta.load-css("components/gallery");
+@include meta.load-css("components/form");
+@include meta.load-css("components/map");
+
+@include meta.load-css("layout/header");
+@include meta.load-css("layout/nav");
+@include meta.load-css("layout/banner");
+@include meta.load-css("layout/footer");
+@include meta.load-css("layout/template");
+
+@include meta.load-css("pages/home");
+@include meta.load-css("pages/about");
+@include meta.load-css("pages/contact");

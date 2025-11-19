@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+.cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	@include m.iossupport() {
+		background-attachment: scroll;
+	}
+}
+
+.bg-static {
+	.cover {
+		background-attachment: scroll;
+	}
+}
+
+.space-tb {
+	padding-top: var.$spaceTB;
+	padding-bottom: var.$spaceTB;
+}
+
+.space-t {
+	padding-top: var.$spaceTB;
+	padding-bottom: 0;
+}
+
+.space-b {
+	padding-top: 0;
+	padding-bottom: var.$spaceTB;
+}
+
+.module-flex {
+	.custom {
+		> * {
+			display: flex;
+			@include m.breakpoint(small) {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.image-module {
+	.custom {
+		display: flex;
+		align-items: center;
+		.module-img {
+			max-width: 50%;
+		}
+	}
+}
+
+.cover-module {
+	height: 100%;
+	.custom {
+		height: 100%;
+		position: relative;
+		.module-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+	}
+		
+
+}
+
+.h100 {
+	height: calc(100% - 50px); // wysokosc header'a
+	.custom {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	font-family: var.$default-header-font;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-white {
+	&, a {
+		color: var.$white;
+		&:hover {
+			color: grey;
+		}
+	}
+	.active {
+		> a {
+			color: grey;
+		}
+	}
+}
+	
+.title {
+	.headers {
+		margin-bottom: 50px;
+	}
+		
+	h3 {
+		font-size: 46px;
+		@include m.breakpoint(small) {
+			font-size: 32px;
+		}
+			
+	}
+	h4 {
+		font-size: 36px;
+		@include m.breakpoint(small) {
+			font-size: 22px;
+		}
+	}
+	p {
+
+	}
+}
+		

@@ -1,0 +1,9 @@
+// .owl-nav {
+// 	@include owl-nav()
+// }
+
+@supports (-webkit-touch-callout: none) {
+  .cover {
+      background-attachment: scroll;
+  }
+}

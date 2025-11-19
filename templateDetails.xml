@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3.0//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+
+<extension version="3.0" type="template" client="site">
+	<name>artist</name>
+	<creationDate>2017</creationDate>
+	<author>Studio Artist</author>
+	<authorEmail>biuro@studioartist.pl</authorEmail>
+	<authorUrl>http://stronyinternetowerzeszow.pl</authorUrl>
+	<copyright>Copyright (C) Studio Artist</copyright>
+	<license>GPL</license>
+	<version>1.0.0</version>
+	<description>Studio Artist</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>sites</position>
+		<position>contact</position>
+		<position>menu</position>
+		<position>banner</position>
+		<position></position>
+		<position></position>
+	</positions>
+
+</extension>

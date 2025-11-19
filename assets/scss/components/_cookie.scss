@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+#ca_banner,
+.jb-cookie {
+	width: 400px !important;
+	border: 0 !important;
+	left: 10px !important;
+	bottom: 10px !important;
+	margin: 0 !important;
+	right: auto !important;
+	height: auto !important;
+	padding: 30px !important;
+	box-shadow: none !important;
+
+	@include m.breakpoint(small) {
+		width: auto !important;
+		bottom: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		font-size: 0.9em !important;
+		padding: 10px !important;
+	}
+
+	.jb-cookie-bg {
+		border: 0 !important;
+	}
+
+	a {
+		color: white !important;
+	}
+
+	h2 {
+		display: none;
+	}
+
+	p {
+		float: left !important;
+		width: 85%;
+		text-align: left;
+		font-size: 12px;
+		line-height: 150%;
+		
+		span {
+			color: #fff;
+			font-weight: normal;
+		}
+			
+	}
+
+	.jb-accept {
+		border: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		float: right !important;
+		width: 15%;
+		padding: 0 !important;
+		text-indent: -5000px;
+		// margin-top: 10px !important;
+		// background: url('../images/zamknij-kopia.png') no-repeat center center !important;
+		background-size: 35px auto !important;
+		box-shadow: none !important;
+	}
+		
+}

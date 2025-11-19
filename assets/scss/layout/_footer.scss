@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+.bottom {
+	padding-left: var.$spaceLR;
+	padding-right: var.$spaceLR;
+	footer {
+		> div {
+			display: flex;
+			justify-content: space-between;
+			@include m.breakpoint(small) {
+				padding-top: 20px;
+				flex-direction: column;
+				align-items: center;
+			}
+			.copyright {
+				margin-right: auto;
+				@include m.breakpoint(small) {
+					margin-right: 0;
+				}
+			}
+			.privacy-link {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				@include m.breakpoint(small) {
+					position: inherit;
+					transform: none;
+				}
+			}
+			a {
+				color: red;
+			}
+			> * {
+				margin: 20px 0;
+				font-size: 0.9em;
+				@include m.breakpoint(small) {
+					margin: 10px 0;
+				}
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

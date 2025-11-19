@@ -1,0 +1,134 @@
+@use '../abstracts/variables' as var;
+
+@mixin breakpoint($point) {
+  @if $point == big {
+    @media only screen and (min-width: var.$screen-big) {
+      @content;
+    }
+  }
+  @else if $point == large {
+    @media only screen and (max-width: var.$screen-large) {
+      @content;
+    }
+  }
+  @else if $point == medium {
+    @media only screen and (max-width: var.$screen-medium) {
+      @content;
+    }
+  }
+  @else if $point == semi {
+    @media only screen and (max-width: var.$screen-semi) {
+      @content;
+    }
+  }
+  @else if $point == small {
+    @media only screen and (max-width: var.$screen-small) {
+      @content;
+    }
+  }
+
+}
+
+@mixin iossupport() {
+  @supports (-webkit-touch-callout: none) {
+    @content;
+  }
+}
+
+@mixin owl-nav() {
+  margin-left: 12.5%;
+  position: relative;
+  margin-top: -100px;
+  button {
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    &.owl-prev,
+    &.owl-next {
+      background: url(../images/prev.png) no-repeat center;
+      background-size: auto 100%;
+      span {
+        display: none;
+      }
+    }
+    &.owl-prev {
+      background-image: url(../images/prev.png);
+      left: 20px;
+    }
+    &.owl-next {
+      background-image: url(../images/next.png);
+      right: 20px;
+    }
+  }
+}
+
+@mixin link-cover() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-indent: -5000px;
+  z-index: 1;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(bounce) {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// animation: bounce 2s ease infinite
+
+  
+@include keyframes(rotate) {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@include keyframes(zoom) {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+  

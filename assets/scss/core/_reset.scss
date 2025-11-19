@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+* {
+	box-sizing: border-box;
+	
+}
+
+body {
+	width: 100%;
+	font-family: var.$default-font;
+	font-size: var.$default-font-size;
+	line-height: var.$default-line-height;
+	background: var.$white;
+	margin: 0;
+	padding: 0;
+	// color: var(--bs-blue);
+	color: var.$default-text-color;
+	
+	@include m.breakpoint(small) {
+		padding: 0;
+		font-size: 100%;
+	}
+
+	&.body-article {
+		padding-top: 220px;
+		
+		@include m.breakpoint(small) {
+			padding-top: 100px;
+		}
+
+	}
+	
+}
+
+html,
+body {
+	height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+
+
+// a
+// 	color: $linkColor
+// 	text-decoration: none
+// 	&:link,
+// 	&:visited,
+// 	&:focus,
+// 	&:hover
+// 		color: $linkColor
+// 		text-decoration: none
+// 	&:focus
+// 		outline: 0
+
+// img
+// 	border: 0
+// 	width: auto
+// 	height: auto
+// 	max-width: 100%
+
+// .clearfix
+// 	*zoom: 1
+// 	&::before,
+// 	&::after
+// 		display: table
+// 		content: ''
+// 		line-height: 0
+// 	&::after
+// 		clear: both
+
+// ul
+// 	margin-top: 30px
+// 	margin-bottom: 30px
+// 	li
+// 		line-height: $lineHeight
+
+// .container
+// 	+breakpoint(big)
+// 		width: $screen-big-size
+// 	+breakpoint(small)
+// 		padding-left: 15px
+// 		padding-right: 15px
+
+// Debug container style
+pre {
+	background-color: var.$pre-debug-background;
+	border: 1px solid var.$pre-debug-border-color;
+	font-family: var.$debug-font;
+	font-size: var.$font-size-s;
+	padding: 20px;
+	border-radius: 5px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: var.$pre-debug-color;
+}

@@ -1,0 +1,141 @@
+@use '../abstracts/variables' as var;
+
+.nav {
+	margin: 0;
+	> li {
+		margin: 15px 0;
+		margin-right: 15px;
+		line-height: 20px;
+		// +breakpoint(big)
+		// 	margin-right: 50px;
+		// +breakpoint(medium)
+		// 	margin-right: 5px;
+			> a {
+				color: var.$menu-link-color;
+				&:hover {
+					color: var.$menu-active-link-color;
+				}
+			}
+			&.active {
+				a {
+					color: var.$menu-active-link-color;
+				}
+			}
+	}
+	.dropdown-menu {
+		border-radius: 0;
+		background: white;
+		top: 22px !important;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -18px;
+			left: 10px;
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid #000;
+		}
+		li {
+			a {
+				text-align: center;
+				padding: 8px 20px;
+				display: block;
+				font-size: 14px;
+			}
+		}
+				
+	}
+		
+}
+	
+.sidenav {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+	padding-top: 0;
+	transition: 0.5s;
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+	.sidenav-header {
+		border-bottom: 1px solid #999;
+		height: 59px;
+		.closebtn {
+			position: absolute;
+			top: 6px;
+			right: 10px;
+			font-size: 42px;
+			margin-left: 50px;
+			width: 45px;
+			height: 45px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				height: 20px;
+			}
+		}	
+	}
+		
+	.sidenav-container {
+		.nav {
+			display: block;
+			.dropdown-menu {
+				position: inherit !important;
+				transform: none !important;
+				inset: auto !important;
+				border: 0;
+				padding-left: 30px;
+				background: transparent;
+				transition: var.$default-transition;
+				a {
+					text-align: left;
+				}
+			}
+				
+		}
+			
+		a {
+			padding: 8px 8px 8px 32px;
+			margin-bottom: 15px;
+			text-decoration: none;
+			color: var.$menu-link-color;
+			display: block;
+			transition: 0.3s;
+			white-space: nowrap;
+			&:hover {
+				color: var.$menu-active-link-color;
+			}
+		}
+	}
+		
+}
+	
+
+.sidenavmenu {
+	> span {
+		cursor: pointer;
+
+		> img {
+			height: 30px;
+			margin-right: 5px;
+
+		}
+	}
+		
+}
+	
+

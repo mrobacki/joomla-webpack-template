@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as var;
+@use "../abstracts/mixins" as m;
+
+a {
+	&.defBtn {
+		display: inline-block;
+		width: var.$def-btn-width;
+		height: var.$def-btn-height;
+		line-height: var.$def-btn-height;
+		text-align: center;
+		background-color: var.$def-btn-bg;
+		color: var.$def-btn-color;
+		margin-top: 20px;
+		transition: var.$default-transition;
+		border: 0 solid var.$def-btn-border;
+		&:hover {
+			background-color: var.$def-btn-bg-hover;
+		}
+	}
+}
